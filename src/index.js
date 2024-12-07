@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Calculator from './main/Calculadora';
-import './index.css';
+import './styles/index.css'; // Estilos globais, se necessário
+import App from './App'; // Importa o componente raiz
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
-      <h1>Calculadora</h1>
-        <Calculator />
-  </div>,
+    <React.StrictMode>
+        Calculadora
+        <App />
+    </React.StrictMode>
 );

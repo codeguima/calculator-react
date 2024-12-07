@@ -1,8 +1,10 @@
 import React from 'react';
-import './Display.css';
+import '../styles/Display.css';
 
- const Display = (props) => (
-    <div className="display">{props.value}</div>
+const Display = ({ value }) => (
+    <div className="display">
+        {value || '0'}
+    </div>
+);
 
- );
- export default Display
+export default Display;

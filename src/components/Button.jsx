@@ -1,17 +1,12 @@
 import React from 'react';
-import './Button.css';
+import '../styles/Button.css';
 
-const Button = (props) => (
+const Button = ({ label, click, operation }) => (
     <button
-        onClick={e => props.click && props.click(props.label)}
-        className={`
-            button 
-            ${props.operation ? 'operation' : ''} 
-            ${props.double ? 'double' : ''} 
-            ${props.triple ? 'triple' : ''}
-        `}
+        onClick={() => click(label)}
+        className={`button ${operation ? 'operation' : ''}`}
     >
-        {props.label}
+        {label}
     </button>
 );
 
