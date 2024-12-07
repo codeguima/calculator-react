@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Button from '../components/Button';
 import Display from '../components/Display';
 
-import './Calculator.css';
+import './styles.css';
 
 const initialState = {
     displayValue: '0',
