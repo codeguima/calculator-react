@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Você pode alterar para o nome do seu branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Verifica o código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Configura o Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Altere para a versão do Node.js que você está utilizando
+
+      # Instala as dependências do projeto
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Build do projeto React
+      - name: Build project
+        run: |
+          npm run build
+
+      # Deploy no GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # O branch para o qual o código será enviado
+          folder: build     # A pasta que será enviada (geralmente "build" para apps React)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token de autenticação

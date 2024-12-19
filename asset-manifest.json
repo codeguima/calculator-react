@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/codeguima/calculator-react/static/css/main.3054ed24.css",
+    "main.js": "/codeguima/calculator-react/static/js/main.6da7a962.js",
+    "static/media/RobotoMono-Thin.ttf": "/codeguima/calculator-react/static/media/RobotoMono-Thin.698eb4c576509b758ea3.ttf",
+    "index.html": "/codeguima/calculator-react/index.html",
+    "main.3054ed24.css.map": "/codeguima/calculator-react/static/css/main.3054ed24.css.map",
+    "main.6da7a962.js.map": "/codeguima/calculator-react/static/js/main.6da7a962.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3054ed24.css",
+    "static/js/main.6da7a962.js"
+  ]
+}
